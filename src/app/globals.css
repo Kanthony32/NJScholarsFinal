@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0561b8;
+  --color-primary-orange: #f2930d;
+  --color-primary-blue: #0f49bd;
+  --color-primary-purple: #930df2;
+  --color-primary-navy: #0a47c2;
+  --color-primary-electric: #8b5cf6;
+  --color-primary-cyan: #25c0f4;
+  --color-primary-pink: #f4259d;
+
+  --color-accent-pink: #d946ef;
+  --color-background-light: #f5f7f8;
+  --color-background-dark: #021a32;
+  --color-cream: #F5F5DC;
+  --color-smoke: #aab4be;
+  --color-navy-card: #0a2540;
+
+  --color-surface-dark: #181511;
+  --color-surface-dark-2: #231f1a;
+  --color-surface-dark-3: #161b26;
+  --color-surface-navy: #101622;
+  --color-surface-purple: #1b1022;
+
+  --color-electric-purple: #a855f7;
+  --color-electric-fuchsia: #d946ef;
+  --color-electric-pink: #ec4899;
+  --color-neon-cyan: #06b6d4;
+
+  --font-lexend: var(--font-lexend);
+  --font-noto-sans: var(--font-noto-sans);
+  --font-manrope: var(--font-manrope);
+  --font-inter: var(--font-inter);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-jakarta: var(--font-plus-jakarta-sans);
+
+  --background-image-navy-gradient: linear-gradient(135deg, #021a32 0%, #052c50 100%);
+  --background-image-hero-glow: radial-gradient(circle at center, rgba(5, 97, 184, 0.4) 0%, transparent 70%);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #021a32;
+    --foreground: #F5F5DC;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.03) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+.hero-glow-bg {
+     background: radial-gradient(circle at 70% 50%, rgba(217, 70, 239, 0.15), transparent 50%),
+                 radial-gradient(circle at 30% 50%, rgba(5, 97, 184, 0.2), transparent 50%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
